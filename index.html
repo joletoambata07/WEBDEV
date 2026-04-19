@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course Registration - Enroll in our exciting programs today!">
+    <title>Course Registration Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .multimedia-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .media-item {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .media-item h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        audio, video {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        .courses-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .courses-section h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 2.2em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: #f8f9ff;
+        }
+
+        .registration-section {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .registration-section h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+        }
+
+        button {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .multimedia-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Image Banner -->
+        <header>
+            <div class="banner">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                     alt="Vibrant university campus with students learning" 
+                     loading="lazy">
+            </div>
+            <h1>🎓 Welcome to Our Learning Academy</h1>
+        </header>
+
+        <!-- Multimedia Section -->
+        <section class="multimedia-section" aria-labelledby="multimedia-heading">
+            <div class="media-item">
+                <h3>🎵 Welcome Audio</h3>
+                <audio controls preload="metadata">
+                    <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+                    <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p>Listen to our welcome message</p>
+            </div>
+            
+            <div class="media-item">
+                <h3>📹 Introductory Video</h3>
+                <video controls preload="metadata" poster="https://images.unsplash.com/photo-1516321310764-9f3c9619d7d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.webm" type="video/webm">
+                    Your browser does not support the video element.
+                </video>
+                <p>Watch our introductory video</p>
+            </div>
+        </section>
+
+        <!-- Courses Table Section -->
+        <section class="courses-section" aria-labelledby="courses-heading">
+            <h2 id="courses-heading">Available Courses</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Course ID</th>
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Instructor</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Seats Available</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CS101</td>
+                        <td>Web Development Fundamentals</td>
+                        <td>12 weeks</td>
+                        <td>Dr. Sarah Johnson</td>
+                        <td>$299</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>DS202</td>
+                        <td>Data Science with Python</td>
+                        <td>10 weeks</td>
+                        <td>Prof. Michael Chen</td>
+                        <td>$399</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>MK301</td>
+                        <td>Digital Marketing Mastery</td>
+                        <td>8 weeks</td>
+                        <td>Emily Rodriguez</td>
+                        <td>$249</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>AI402</td>
+                        <td>Artificial Intelligence Basics</td>
+                        <td>14 weeks</td>
+                        <td>Dr. Raj Patel</td>
+                        <td>$499</td>
+                        <td>12</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Registration Form Section -->
+        <section class="registration-section" aria-labelledby="registration-heading">
+            <h2 id="registration-heading">Register for Courses</h2>
+            <form id="registrationForm" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" 
+                           id="fullName" 
+                           name="fullName" 
+                           required 
+                           maxlength="100"
+                           placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" 
+                           id="email" 
+                           name="email" 
+                           required 
+                           placeholder="yourname@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" 
+                           id="phone" 
+                           name="phone" 
+                           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                           placeholder="123-456-7890">
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Select Course *</label>
+                    <select id="course" name="course" required>
+                        <option value="">Choose a course...</option>
+                        <option value="CS101">CS101 - Web Development Fundamentals</option>
+                        <option value="DS202">DS202 - Data Science with Python</option>
+                        <option value="MK301">MK301 - Digital Marketing Mastery</option>
+                        <option value="AI402">AI402 - Artificial Intelligence Basics</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Years of Experience</label>
+                    <input type="number" 
+                           id="experience" 
+                           name="experience" 
+                           min="0" 
+                           max="50" 
+                           value="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Additional Comments</label>
+                    <textarea id="comments" 
+                              name="comments" 
+                              rows="4" 
+                              maxlength="500" 
+                              placeholder="Tell us about your learning goals..."></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" 
+                           id="newsletter" 
+                           name="newsletter" 
+                           value="yes">
+                    <label for="newsletter">Subscribe to our newsletter</label>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" 
+                           id="terms" 
+                           name="terms" 
+                           value="yes" 
+                           required>
+                    <label for="terms">I agree to the <a href="#" style="color: #667eea;">Terms and Conditions</a> *</label>
+                </div>
+
+                <button type="submit">🚀 Register Now</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Learning Academy. All rights reserved. | <a href="#" style="color: #fff;">Privacy Policy</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple form validation enhancement
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation
+            const formData = new FormData(this);
+            const fullName = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            
+            if (fullName && email && document.getElementById('terms').checked) {
+                alert('🎉 Thank you for registering! We\'ll contact you soon with confirmation details.');
+                this.reset();
+            } else {
+                alert('Please fill in all required fields and accept the terms.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Web Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="banner">
+                <img src="images/image.png" alt="Bacolod City College Logo">
+                <h3>Bacolod City College</h3>
+            </div>
+                <section><br><br>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Courses</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>College of Education</td>
+                            </tr>
+                            <tr>
+                                <td>Bachelor of Science in Information Systems</td>
+                            </tr>
+                            <tr>
+                                <td>Bachelor of Science in Business Administration</td>
+                            </tr>
+                            <tr>
+                                <td>Bachelor of Science in Entrepreneurship</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <footer>
+                    <div class="registrationForm">
+                        <h3>Registration Form</h3>
+                        <form method="POST">
+                            <label>Last Name *</label><br>
+                            <input type="text" name="lastName" required><br><br>
+                            <label>First Name *</label><br>
+                            <input type="text" name="firstName" required><br>
+                            <h3>Select Course to Enroll</h3>
+                            <select name="courses" id="courses">
+                                <option value="">-- Choose your Course --</option>
+                                <option value="COED">College of Education</option>
+                                <option value="BSIS">Bachelor of Science in Information Systems</option>
+                                <option value="BSBA">Bachelor of Science in Business Administration</option>
+                                <option value="BSE">Bachelor of Science in Entrepreneurship</option>
+                            </select><br><br>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </footer>
+        </header>
+    </div>
+</body>
+</html>
